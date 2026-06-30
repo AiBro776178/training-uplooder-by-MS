@@ -879,7 +879,6 @@ async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"**🔹ʜᴀʙɪʙɪ ɪ ᴀᴍ ᴘᴏᴡᴇꜰᴜʟ ꜰᴜʀʏ ᴛxᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ📥.**\n🔹**ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ᴛxᴛ ꜰɪʟᴇ ᴀɴᴅ ᴊᴜꜱᴛ ᴡᴀɪᴛ ᴀɴᴅ ᴡᴀᴛᴄʜ😎.**")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await input.delete(True)
     await bot.send_document(OWNER, x)
     file_name, ext = os.path.splitext(os.path.basename(x))
     credit = f"@SmartBoy_ApnaMS"
